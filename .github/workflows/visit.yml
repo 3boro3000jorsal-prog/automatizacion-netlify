@@ -1,0 +1,22 @@
+name: Visit Netlify Bi-Monthly
+on:
+  schedule:
+    - cron: '0 0 1 * *'   # 1ero de cada mes a las 00:00
+    - cron: '0 0 15 * *'  # 15 de cada mes a las 00:00
+  workflow_dispatch:       # Ejecución manual
+
+jobs:
+  visit-sites:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Visit Netlify sites
+        run: |
+          echo "🔄 Visitando sitios Netlify..."
+          echo "📅 Fecha: $(date)"
+          
+          # REEMPLAZA CON TUS URLs REALES:
+          curl -s "https://spa53.netlify.app/"
+          
+          
+          echo "✅ Todos los sitios visitados correctamente"
+          echo "📅 Próxima visita automática: 1ero o 15 del próximo mes"
