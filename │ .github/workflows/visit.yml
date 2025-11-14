@@ -13,3 +13,4 @@ jobs:
         run: |
           curl -s "https://spa53.netlify.app/"
           echo "✅ Sitio visitado automáticamente"
+          
