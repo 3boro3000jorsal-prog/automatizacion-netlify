@@ -1,0 +1,26 @@
+name: Mantener Sitios Netlify Activos
+on:
+  schedule:
+    - cron: '0 0 1 * *'
+    - cron: '0 0 15 * *'
+  workflow_dispatch:
+
+jobs:
+  visitar-sitios:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🌐 Visitar 1 sitios Netlify
+        run: |
+          echo "🚀 INICIANDO MANTENIMIENTO AUTOMÁTICO"
+          echo "📅 Fecha: \$(date)"
+          echo "🌐 Total de sitios: 1"
+          echo "=========================================="
+          
+          curl -s "https://spa53.netlify.app/"
+          echo "   ✅ spa53/ - MANTENIDO ACTIVO"
+          
+          echo "=========================================="
+          echo "🎉 ¡MISIÓN CUMPLIDA!"
+          echo "✅ 1/1 sitios Netlify mantenidos activos"
+          echo "📅 Próxima ejecución automática:"
+          echo "   🗓️ Días 1, 15 de cada mes"
