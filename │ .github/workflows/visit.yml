@@ -12,7 +12,7 @@ jobs:
       - name: Visit Netlify sites
         run: |
           curl -s "https://spa53.netlify.app/"
-          echo "✅ Sitio visitado automáticamente"
+          echo "✅ Sitio Netlify visitado automáticamente"
 
           
           
